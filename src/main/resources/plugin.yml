@@ -1,0 +1,11 @@
+name: BetterCooking
+version: '$version'
+
+main: org.exampl.betterCooking.BetterCooking
+api-version: '1.21.11'
+load: POSTWORLD
+
+
+commands:
+  spawnchoppingboard:
+    description: Spawn a chopping board
