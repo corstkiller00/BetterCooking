@@ -2,6 +2,7 @@ package org.exampl.betterCooking;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.exampl.betterCooking.Commands.SpawnChoppingBoardCommand;
+import org.exampl.betterCooking.Listeners.CustomEntityTakesDamageListener;
 import org.exampl.betterCooking.Listeners.ItemDisplayInteractListener;
 
 public final class BetterCooking extends JavaPlugin {
@@ -13,6 +14,7 @@ public final class BetterCooking extends JavaPlugin {
         // Plugin startup logic
         betterCooking = this;
         getServer().getPluginManager().registerEvents(new ItemDisplayInteractListener(), this);
+        getServer().getPluginManager().registerEvents(new CustomEntityTakesDamageListener(), this);
         getCommand("spawnchoppingboard").setExecutor(
                 new SpawnChoppingBoardCommand()
         );

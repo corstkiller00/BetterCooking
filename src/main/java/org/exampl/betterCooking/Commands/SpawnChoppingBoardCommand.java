@@ -60,12 +60,24 @@ public class SpawnChoppingBoardCommand implements CommandExecutor {
                 "custom_object"
         );
 
+
+        NamespacedKey displayUUIDKey = new NamespacedKey(
+                BetterCooking.getBetterCooking(),
+                "item_display_UUID"
+        );
+
         Interaction interaction = player.getWorld().spawn(location, Interaction.class);
 
         interaction.getPersistentDataContainer().set(
                 objectKey,
                 PersistentDataType.STRING,
                 "chopping_board"
+        );
+
+        interaction.getPersistentDataContainer().set(
+                displayUUIDKey,
+                PersistentDataType.STRING,
+                display.getUniqueId().toString()
         );
 
 

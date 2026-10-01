@@ -20,8 +20,6 @@ public class ItemDisplayInteractListener implements Listener {
     @EventHandler
     public void onItemDisplayInteract(PlayerInteractEntityEvent event) {
 
-        System.out.println("Fire");
-
         if (!(event.getRightClicked() instanceof Interaction interaction)) {
             return;
         }
